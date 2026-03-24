@@ -1,0 +1,120 @@
+
+@import url('https://db.onlinewebfonts.com/c/b6a841435b51f72076957ada2f275f2a?family=Argentum+Novus');
+.navbar {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg ,#005276 0 60%,#008CB4);
+  padding: 0.5rem 2rem;
+  color: white;
+  font-family: "Argentum Novus";
+}
+
+.navbar_brand {
+  font-size: 2rem;
+  cursor: pointer;
+  font-family: "Argentum Novus";
+  font-weight: 100;
+}
+.navbar_brand strong{
+  font-weight :900;
+  font-size: 35px;
+  color: white;
+  text-shadow: rgba(255, 255, 255, 0.244) 1px 0 10px;}
+
+.navbar_nav {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.navbar span{
+  color: transparent;
+}
+
+.btn{
+  padding-bottom: 30px;
+  height: 30px;
+}
+
+.list{
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+.list:hover{
+  transform: scale(1.05);
+  text-shadow: rgba(255, 255, 255, 0.5) 1px 0 10px;
+}
+.list:active{
+  color: #e7e7e7;
+}
+
+.button{
+  background: white;
+  color: #005276;
+  font-weight: 500;
+  padding: 9px 15px 0 15px ;
+  margin: -10px 0;
+  border-radius: 60px;
+  cursor: pointer;
+  font-family: "Argentum Novus";
+  transition: transform 0.3s ease;
+}
+.button:hover{
+  transform: scale(0.95);
+}
+.button:active{
+  background: #e7e7e7;
+}
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .navbar{
+    align-items: center;
+    width: 85.5%;
+  }
+
+  .navbar_nav {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(45deg ,#005276 0 77%,#008CB4);
+    padding: 1rem 0;
+    z-index: 1;
+  }
+  .btn{
+    margin: 0;
+  }
+
+  .navbar_nav.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 4%;
+    width: 101%;
+  }
+
+  .list,
+  .button {
+    text-align: center;
+  }
+
+  .button {
+    text-align: center;
+    margin-top: 0.5rem;
+    padding: 10px;
+  }
+}

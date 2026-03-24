@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.Home {
+  text-align: center;
+}
+
+.hero_section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+  width: auto;
+  height: 80vh; /* ou toute autre taille que vous souhaitez */
+  background-image: url('../../images/Background3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero_content {
+  max-width: 50%;
+}
+
+.hero_content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero_content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.connect_button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background: linear-gradient(#E7E7E7,#FFF);
+  color: #005276;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+}
+
+.hero_image img {
+  width: auto;
+  height: 525px;
+  border-radius: 10px;
+}
+
+.button{
+  background: white;
+  border: none;
+  color: #005276;
+  font-weight: 500;
+  padding: 0.7rem 1.4rem;
+  font-size: medium;
+  margin: -10px 0;
+  border-radius: 60px;
+  cursor: pointer;
+  font-family: "Argentum Novus", Arial;
+  transition: transform 0.3s ease;
+}
+.button:hover{
+  transform: scale(0.95);
+}
+.button:active{
+  background: #e7e7e7;
+}
+
+@media screen and (max-width: 768px) {
+  .hero_section {
+    background-image: url('../../images/Background3\ -\ Copie.png');
+    background-size:cover;
+  background-position: center;
+  background-repeat: repeat-y;
+    flex-direction: column; /* Changer la direction pour les écrans plus petits */
+    height: 90vh; /* Ajustement de la hauteur automatique */
+    width: 39.5vh;
+  }
+
+  .hero_content,
+  .hero_image {
+    width: 100%; /* Ajustement de la largeur pour occuper toute la largeur */
+    max-width: none; /* Supprimer la limite de largeur */
+    text-align: center; /* Centrer le contenu */
+    margin-bottom: 2rem; /* Ajout de marge en bas */
+  }
+
+  .hero_image img {
+    display: none;
+    height: auto; /* Ajustement de la hauteur automatique */
+    width: 80%; /* Réduire la largeur de l'image */
+  }
+
+  .connect_button {
+    padding: 0.8rem 2rem; /* Ajustement du rembourrage */
+    font-size: 1.2rem; /* Ajustement de la taille de la police */
+  }
+}

@@ -1,0 +1,320 @@
+body {
+	margin: 0;
+	font-family: "Argentum Novus";
+   font-weight: normal;
+   font-style: normal;
+   overflow: hidden !important;
+  }
+  
+  .hero_section {
+	padding-top: 0;
+	padding: 2rem;
+	text-align: center;
+	width: auto;
+	height: 78vh; /* ou toute autre taille que vous souhaitez */
+	/* background: linear-gradient(45deg ,#005276 0 60%,#008CB4); */
+	background-image: url("../../images/Background2.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	font-family: "Argentum Novus";
+  }
+
+  .hero_section h1{
+	background: white;
+	width: auto;
+	margin-top: 10vh;
+	font-size: 4rem;
+	color: #434343;
+  }
+  .hero_section h2{
+	background: radial-gradient(circle,#ffffff,#f8f8f8);
+	padding: 10px 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	width: 26%;
+	font-size: 2rem;
+	border-radius: 20px;
+	color: #434343;
+  }
+  
+  .hero_content {
+	max-width: 100%;
+	display: flex; 
+	align-items: center;
+	justify-content: space-evenly;
+	font-family: "Argentum Novus";
+  }
+  
+  .card{
+	border: 1px solid #cccccc8e;
+	background: #FFF;
+	border-radius: 20px;
+	padding-bottom: 0.5rem;
+	width: 23%;
+	height: auto;
+	font-family: "Argentum Novus";
+	transition: transform 0.3s ease;
+  }
+  .card:hover{
+	transform: scale(1.05);
+  }
+
+  .card img{
+	width: 100%;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+  }
+  .card h3{
+	text-align: center;
+	color: #434343;
+
+  }
+  .info{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	color: #434343;
+	font-family: "Argentum Novus";
+  }
+  .info p{
+	padding-left: 2.5rem;
+  }
+  #vote{
+	margin-right: 1rem;
+  }
+  @keyframes color {
+		0%   {background: linear-gradient(45deg ,#005276 0 60%,#008CB4);}
+		25%  {background: linear-gradient(45deg ,#005276 0 70%,#008CB4);}
+		50%  {background: linear-gradient(45deg ,#005276 0 80%,#008CB4);}
+		75%  {background: linear-gradient(45deg ,#005276 0 90%,#008CB4);}
+		100% {background: linear-gradient(45deg ,#005276 0 100%,#008CB4);}
+	}
+	
+  .button {
+    padding: 0.6rem 1.7rem;
+    font-size: 1rem;
+    background: linear-gradient(45deg, #005276 0%, #008CB4 100%);
+    color: white;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    font-family: "Argentum Novus";
+    transition: transform 0.3s ease;
+}
+
+.button:hover {
+  background: #005276;
+  transform: scale(0.95);
+	animation: color ;
+	animation-duration: 0.12s;
+}
+
+.button:active{
+    background: #00405c;
+}
+
+  
+  @keyframes scaleUp {
+    from {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+.close_button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.close_button:hover {
+    color: red;
+}
+
+.voir {
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+	  background: linear-gradient(45deg ,#e4e4e4 ,#ffffff);
+    border-radius: 60px;
+    cursor: pointer;
+    font-family: "Argentum Novus";
+    outline: #00405c solid 1px;
+}
+.voir span{
+  background: -webkit-linear-gradient(45deg,#005276 40%, #008CB4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.voir:hover {
+	background: #ffffff;
+	
+}
+
+.voir:active {
+	background: #e4e4e4;
+	
+}
+.loading_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loading_popup {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading_bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 60px;
+  background: #ccc;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.loading_bar::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(45deg ,#37a537 0 60%,#60c160);;
+  animation: loading 5s linear forwards;
+}
+.loading_popup p{
+  font-family: "Argentum Novus";
+}
+
+@keyframes loading {
+  to {
+      width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .hero_section {
+    background-size:contain;
+	  background-position:top;
+	  background-repeat:repeat-y;
+    height: 90vh; /* Ajustement de la hauteur automatique */
+    padding: 1rem; /* Ajustement de l'espacement intérieur */
+    padding-top: 2vh; /* Ajustement de l'espacement en haut */
+    text-align: center; /* Centrer le contenu */
+  }
+  
+  .hero_section h1,
+  .hero_section h2 {
+    width: 100%;
+    font-size: 2rem; /* Ajustement de la taille de la police pour les écrans plus petits */
+  }
+  
+  .hero_content {
+    height: 80vh;
+    overflow-y: scroll;
+    flex-wrap: wrap; /* Envelopper les éléments sur plusieurs lignes */
+    justify-content: center; /* Centrer les éléments horizontalement */
+  }
+
+  .card {
+    width: 80%; /* Réduire la largeur des cartes pour s'adapter à l'écran */
+    margin: 1rem; /* Ajouter de la marge entre les cartes */
+  }
+
+  .card img {
+    border-radius: 8px; /* Ajouter un peu de bord arrondi aux images */
+  }
+
+  .info {
+    align-items: center; /* Centrer les informations verticalement */
+  }
+
+  .info p {
+    padding: 0.5rem; /* Ajuster la marge intérieure autour du texte */
+  }
+
+  .button,
+  .voir {
+    width: 40%; /* Ajustement de la largeur des boutons pour s'adapter à l'écran */
+    margin-top: 0.5rem; /* Ajouter de la marge en haut des boutons */
+    margin-bottom: 0rem; /* Ajouter de la marge en bas des boutons */
+  }
+  
+  .modal_overlay{
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+  }
+  .modal {
+    max-width: 50%; /* Réduire la largeur du modal pour s'adapter à l'écran */
+    padding: 1rem; /* Ajuster l'espacement intérieur */
+  }
+
+  .close_button {
+    font-size: 1.5rem; /* Ajustement de la taille de la police du bouton de fermeture */
+    top: 5px; /* Ajuster la position verticale du bouton de fermeture */
+    right: 5px; /* Ajuster la position horizontale du bouton de fermeture */
+  }
+}
+

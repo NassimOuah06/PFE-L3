@@ -1,0 +1,101 @@
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  .hero_section {
+   background: white;
+   display: flex;
+   flex-direction: column;
+   padding-top: 20px;
+   padding-left: 100px;
+   height: 85vh;
+   overflow-y: scroll;
+   overflow-x: hidden;
+  }
+  .hero_section h1{
+    width: 350px;
+    background: -webkit-linear-gradient(45deg,#005276 40%, #008CB4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+  }
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(90deg ,#f0f0f08e 0 20%,#ffffff);
+    height: 100px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px -20px rgba(0, 0, 0, 0.365); 
+    margin: 10px;
+    width:85vw;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+
+.num{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 8%;
+    padding: 13px 3px 0px 23px;
+    font-weight: bold;
+    font-size: 30px;
+    background: linear-gradient(135deg ,#005276 0 40%,#008CB4);
+    color: white;
+}
+.desc{
+    text-align: left;
+    margin-left: 20px;
+    margin: 30px 20px;
+    color: rgba(0, 0, 0, 0.904);
+    width: 90%;
+}
+@media screen and (max-width: 768px) {
+  .hero_section {
+    height: 90vh;
+    padding-left: 5%; /* Ajustement des marges pour les écrans plus petits */
+  }
+
+  .hero_section h1 {
+    font-size: 24px; /* Ajustement de la taille de la police pour les écrans plus petits */
+    max-width: none; /* Supprimer la limite de largeur pour les écrans plus petits */
+  }
+
+  .card {
+    height: 200px;
+    width: 90%; /* Ajustement de la largeur pour les écrans plus petits */
+  }
+  .desc{
+    width: 80%;
+    
+  }
+  .num{
+    padding: 13px 3px 0px 23px;
+    margin: 10px 20px;
+  }
+
+}
+
+  

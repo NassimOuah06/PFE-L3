@@ -1,0 +1,133 @@
+
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  font-family: "Argentum Novus";
+}
+.content {
+  display: flex;
+  font-family: "Argentum Novus";
+}
+
+body {
+  margin: 0;
+  font-family: "Argentum Novus";
+}
+header {
+  background: #fff;
+  font-family: "Argentum Novus";
+}
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: #333;
+  text-decoration: none;
+}
+.pages{
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* styles.css */
+.table-container {
+  margin-top: 20px;
+  font-family: "Argentum Novus";
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Argentum Novus";
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #dddddd;
+  text-align: left;
+  font-family: "Argentum Novus";
+}
+
+th {
+  background-color: #005276;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* new voter form */
+label, input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: "Argentum Novus";
+}
+form button {
+  background: #005276;
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Argentum Novus";
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form {
+  max-width: 400px; /* Adjust the width of the form container */
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.table button {
+  cursor: pointer;
+  padding: 6px;
+  border-radius:  7px;
+  border: white;
+  color: white;
+  font-family: "Argentum Novus";}
+
+.red{
+  background-color: #dc3545;
+  margin-left: 10px;
+}
+
+.yellow{
+  background-color: #ffc107;
+}
+
+.red:hover{
+  background-color: #ae2f3c;
+  margin-left: 10px;
+}
+
+.yellow:hover{
+  background-color: #d49f01;
+}
+input.error {
+  border: 1px solid var(--error);
+}
+

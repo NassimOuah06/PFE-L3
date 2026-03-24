@@ -1,0 +1,31 @@
+@import url('https://db.onlinewebfonts.com/c/b6a841435b51f72076957ada2f275f2a?family=Argentum+Novus');
+
+.container {
+	width: 100%;
+	height: 90vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-family: "Argentum Novus";
+}
+
+.green_btn {
+	border: none;
+	outline: none;
+	padding: 12px 0;
+	margin-top: 5px;
+	background: linear-gradient(45deg ,#005276 0 60%,#008CB4);
+	border-radius: 20px;
+	color: white;
+	width: 180px;
+	font-weight:600;
+	font-size: 15px;
+	cursor: pointer;
+	font-family: "Argentum Novus";
+}
+@media screen and (max-width: 768px) {
+	.container h1{
+		font-size:x-large;
+	}
+}
